@@ -1,7 +1,7 @@
 import { renderHook, act, waitFor } from "@testing-library/react";
 import { useBarcodeValidating } from "./useBarcodeValidating";
 import * as mockService from "../services/mockApi";
-import * as barcodeUtils from "../utils/barcode";
+import * as barcodeUtils from "../utils/Barcode";
 
 // Mock the async API
 jest.mock("../services/mockApi");

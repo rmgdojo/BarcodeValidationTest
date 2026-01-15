@@ -5,7 +5,7 @@ body {
 
 .app {
     min-height: 100vh;
-
+    overflow: hidden;
 
     .textContainer {
         display: flex;
@@ -50,7 +50,7 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
-        padding: 10% 0;
+        padding: 24px 0px;
         display: flex;
         justify-content: center;
     }
@@ -87,5 +87,13 @@ body {
   .textStyle,
   .trackButtonStyle {
     width: 100%;
+  }
+
+  .app {
+    overflow: auto;
+  }
+
+  .validateContainer {
+    margin-bottom: 2%;
   }
 }

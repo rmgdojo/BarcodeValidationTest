@@ -1,4 +1,4 @@
-import { validateBarcode } from "./barcode";
+import { validateBarcode } from "./Barcode";
 
 describe("validateBarcode", () => {
   it("returns error when barcode is empty", () => {

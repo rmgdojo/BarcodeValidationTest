@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { validateBarcode } from "../utils/barcode";
+import { validateBarcode } from "../utils/Barcode";
 import { mockApi } from "../services/mockApi";
 import type { HistoryItem } from "../types";
 

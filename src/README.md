@@ -7,12 +7,11 @@ Built using **Vite** for fast development and **Jest** for unit testing.
 
 ## 📦 Tech Stack
 
-- **React 18**
-- **TypeScript**
-- **Vite**
-- **Jest**
-- **@testing-library/react**
-- **ESLint**
+- ⚛️ React 18
+- 🟦 TypeScript
+- ⚡ Vite
+- 🧪 Jest
+- 🧹 ESLint
 
 ---
 
@@ -44,6 +43,9 @@ npx jest src/hooks
 npx jest src/utils
 ### Run only components tests
 npx jest src/components
+
+### Run lint checks
+npm run lint
 
 ## 🗂️ Project Structure
 
@@ -113,7 +115,29 @@ Multiple barcode validations can run concurrently.
 
 - Mirrors real-world parcel tracking behavior
 
-### Jest for Testing
+### Form UX & Validation Behaviour
+
+- The submit button is disabled when the input is empty
+
+- Prevents unnecessary validation attempts
+
+- Basic Responsiveness
+
+### ♿ Accessibility Considerations
+
+- All form controls use proper semantic HTML elements (`<form>`, `<label>`, `<input>`, `<button>`)
+
+- Inputs are associated with labels using `htmlFor`, ensuring screen reader compatibility
+
+- The form supports **full keyboard accessibility**:
+  - Users can tab to the input field and submit button
+  - Pressing **Enter** submits the form when the input is focused
+
+- Disabled states are used appropriately to prevent invalid submissions
+
+- Visual feedback is accompanied by text (e.g. status messages), not colour alone
+
+### 🧪 Jest for Testing
 
 ## Unit tests cover:
 
@@ -141,11 +165,16 @@ Multiple barcode validations can run concurrently.
 
 - Deterministic mock API for predictable testing
 
+- Adopting a UI design system (e.g. Tailwind or MUI)
+
 - Persist tracked history using localStorage or a backend
 
 - Retry actions for failed validations
 
 - Table virtualisation for large datasets
 
-- End-to-end testing with Playwright or Cypress
+- End-to-end testing with Playwright or Cypress and more Unit tests as well
 
+- Further splitting of hooks for finer-grained responsibilities
+
+- Docker support for consistent local and CI environments

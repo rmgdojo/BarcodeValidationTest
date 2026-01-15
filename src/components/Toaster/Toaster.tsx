@@ -24,7 +24,7 @@ export default function Toaster({
 
     return (
         <div
-            className={`toast ${type}`}
+            className={`toast toast-${type}`}
             role="status"
             aria-live="polite"
         >

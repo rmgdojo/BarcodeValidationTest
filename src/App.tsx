@@ -1,8 +1,8 @@
 import Header from "./components/Header/header";
-import Toaster from "./components/Toaster/Toaster";
-import Table from "./components/Table/Table";
-import BarcodeForm from "./components/BarcodeForm/BarcodeForm";
-import Footer from "./components/Footer/Footer";
+import Toaster from "./components/Toaster/toaster";
+import Table from "./components/Table/table";
+import BarcodeForm from "./components/barcodeForm/barcodeForm";
+import Footer from "./components/Footer/footer";
 import vehicleImage from "./images/Vehicle.png";
 import { useBarcodeValidating } from "./hooks/useBarcodeValidating";
 

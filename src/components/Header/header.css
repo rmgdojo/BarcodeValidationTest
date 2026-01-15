@@ -1,23 +1,22 @@
-.headerContainer {
-    background-color: #DA202A;
-    width: 100%;
-    padding: 13px;
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
 
-    .imageContainer {
-        padding: 8px 12px;
-        display: inline-flex;
-        align-items: center;
+    .headerContainer {
+        background-color: #DA202A;
+        width: 100%;
+        padding: 13px;
 
-        .imageStyle {
-            height: 48px;
-            display: block;
+        .imageContainer {
+            padding: 8px 12px;
+            display: inline-flex;
+            align-items: center;
+
+            .imageStyle {
+                height: 48px;
+                display: block;
+            }
         }
     }
-}
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-
-  background-color: #fff; /* IMPORTANT */
 }
