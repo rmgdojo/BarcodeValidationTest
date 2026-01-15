@@ -40,7 +40,8 @@ export default function BarcodeForm({
           autoComplete="off"
         />
 
-        <button className="validateButtonStyle" type="submit">
+        <button disabled={!value.trim()}
+          aria-disabled={!value.trim()} className="validateButtonStyle" type="submit">
           Validate your Barcode
         </button>
       </div>

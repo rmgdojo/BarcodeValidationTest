@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { validateBarcode } from "../utils/barcode";
 import { mockApi } from "../services/mockApi";
 import type { HistoryItem } from "../types";
 
-let counter = 0;
+
+
+
 
 export function useBarcodeValidating() {
+  const counterRef = useRef(0);
   const [input, setInput] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [history, setHistory] = useState<HistoryItem[]>([]);
@@ -26,7 +29,7 @@ export function useBarcodeValidating() {
       return;
     }
 
-    const id = ++counter;
+    const id = ++counterRef.current;
     setInput("");
 
     setHistory((h) => [
