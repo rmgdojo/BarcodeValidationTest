@@ -124,6 +124,14 @@ Multiple barcode validations can run concurrently.
 - Each barcode tracks its own lifecycle (`Validating` → `Valid` / `Invalid`)
 - Mirrors real-world parcel tracking behavior
 
+### 🔔 Toast Notifications
+
+A non-blocking toast notification system is used to provide immediate feedback for async validation results.
+
+- Success toasts are shown when a barcode is validated successfully
+- Error toasts are shown when server-side validation fails
+- Toasts do not block user interaction or prevent concurrent submissions
+
 ### 📝 Form UX & Validation Behaviour
 
 - The submit button is **disabled when the input is empty**
