@@ -1,0 +1,22 @@
+.header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+
+    .headerContainer {
+        background-color: #DA202A;
+        width: 100%;
+        padding: 13px;
+
+        .imageContainer {
+            padding: 8px 12px;
+            display: inline-flex;
+            align-items: center;
+
+            .imageStyle {
+                height: 48px;
+                display: block;
+            }
+        }
+    }
+}
