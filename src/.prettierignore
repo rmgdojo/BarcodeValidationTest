@@ -1,0 +1,14 @@
+# Ignore artifacts:
+node_modules
+.next
+dist
+build
+*.min.js
+*.min.css
+package-lock.json
+yarn.lock
+.replit
+.cache
+.config
+.local
+.upm
