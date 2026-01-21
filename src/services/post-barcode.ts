@@ -28,9 +28,7 @@ export const postBarcode = async (
   }
 
   const delay = Math.floor(Math.random() * DELAY_UPPER_LIMIT) + 1;
-  console.time(`time-${delay}`);
   await wait(delay);
-  console.timeEnd(`time-${delay}`);
 
   return new Promise((resolve, reject) => {
     const barcode = formData.get("barcode").toString();
