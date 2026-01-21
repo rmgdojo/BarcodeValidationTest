@@ -19,7 +19,7 @@ A lightweight web application for validating Royal Mail barcodes.
 
 ```bash
 # Clone the repository
-git clone [git@github.com:rmgdojo/BarcodeValidationTest.git]
+git clone [git@github.com:IfyNdu/BarcodeValidationTest.git]
 
 # Change directory
 cd BarcodeValidationTest/src
