@@ -10,12 +10,7 @@ import { changeValue, submitBarcode } from "@/store/barcode";
 import { renderToast } from "@/store/notification";
 import { RootState } from "@/store/setup-store";
 import { Button } from "@/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/ui/card";
 import { Field, FieldError, FieldGroup, FieldLabel } from "@/ui/field";
 import { Input } from "@/ui/input";
 
@@ -91,7 +86,7 @@ export const BarcodeValidator: React.FC = () => {
                 Enter a Royal Mail barcode to validate
               </FieldLabel>
               <Input
-                aria-errormessage="error-label"
+                aria-errormessage="error-field"
                 aria-invalid={!!barcodeError}
                 aria-label="Barcode input"
                 autoComplete="off"
@@ -104,7 +99,11 @@ export const BarcodeValidator: React.FC = () => {
                 type="text"
                 value={barcode}
               />
-              <FieldError id="error-label" className="block italic text-sm">
+              <FieldError
+                data-testid="error-field"
+                id="error-field"
+                className="block italic text-sm"
+              >
                 {barcodeError}
               </FieldError>
             </Field>
