@@ -123,7 +123,8 @@ BarcodeValidationTest/
 2. Implement a lightweight custom server that responds as required. Using real network requests via `fetch` or `axios` would allow proper request cancellation based on timeouts or duplicate submissions.
 3. Implement list virtualisation (windowing) where large datasets are displayed. Virtualisation limits rendering to only the data currently visible to the user. Most third-party libraries (for example, `AG-Grid` and `react-virtuoso`) recycle DOM nodes as the user scrolls, keeping the DOM lightweight and ensuring smooth, responsive user interactions.
 4. Introduce a search capability to help users efficiently filter large datasets. The search logic would operate directly on the Redux store rather than querying rendered HTML elements, ensuring all barcodes are considered before displaying results.
-5. `E2E` testing with puppeteer, playwright or Cypress
+5. Implement **E2E** testing using tools such as Puppeteer, Playwright, or Cypress to validate complete user workflows and ensure system reliability
+6. Introduce retry and backoff strategies such as exponential backoff when handling invalid barcode submissions thereby improving resilience and fault tolerance.
 
 ## Area of priority
 
