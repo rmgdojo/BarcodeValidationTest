@@ -2,6 +2,8 @@
 
 A complete React + TypeScript application for validating Royal Mail barcodes, built with SOLID principles and atomic design patterns.
 
+Built with the help of Cursor AI (Auto agent)
+
 ## 🚀 Setup and Run Instructions
 
 ### Prerequisites
