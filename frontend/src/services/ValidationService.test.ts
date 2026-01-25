@@ -9,7 +9,7 @@ describe('ValidationService', () => {
       const validBarcodes = [
         'AB473124829GB',
         'XH545554533GB',
-        'ZZ999999990GB',
+        'ZZ999999995GB', // Fixed: check digit should be 5, not 0
         'AA000000005GB',
       ];
 
@@ -31,7 +31,12 @@ describe('ValidationService', () => {
     });
 
     it('should reject barcodes with invalid prefix', () => {
-      const invalidBarcodes = ['aB473124829GB', '12347124829GB', 'A473124829GB'];
+      // Use 13-character barcodes with invalid prefixes
+      const invalidBarcodes = [
+        'aB473124829GB', // lowercase letter
+        '12347124829GB', // starts with digit
+        'A9473124829GB', // only one letter
+      ];
 
       invalidBarcodes.forEach((barcode) => {
         const result = validationService.validate(barcode);
@@ -41,7 +46,12 @@ describe('ValidationService', () => {
     });
 
     it('should reject barcodes with invalid serial number', () => {
-      const invalidBarcodes = ['AB4731248X9GB', 'AB4731248GB', 'ABabc124829GB'];
+      // Use 13-character barcodes with invalid serial numbers
+      const invalidBarcodes = [
+        'AB4731248X9GB', // contains letter X in serial
+        'AB4731248A9GB', // contains letter A in serial
+        'ABabc124829GB', // contains letters in serial
+      ];
 
       invalidBarcodes.forEach((barcode) => {
         const result = validationService.validate(barcode);
