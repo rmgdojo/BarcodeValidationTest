@@ -34,13 +34,11 @@ export class ValidationService {
    * - Invalid format barcodes always fail
    * - Valid format barcodes randomly succeed or fail (50% chance) after a random delay
    * 
-   * Delay is configurable via VALIDATION_DELAY_MAX environment variable:
-   * - Default: 1-3 seconds (better for development/testing)
-   * - Set VALIDATION_DELAY_MAX=30000 for full 1-30 second range (per requirements)
+   * Delay is 1-30 seconds as per requirements (configurable via VALIDATION_DELAY_MAX for testing)
    */
   async validateBarcode(barcode: string): Promise<{ isValid: boolean; message: string }> {
-    // Configurable delay: default 1-3 seconds, or 1-30 seconds if VALIDATION_DELAY_MAX is set
-    const maxDelay = Number.parseInt(process.env.VALIDATION_DELAY_MAX ?? '3000', 10);
+    // Delay: 1-30 seconds per requirements (configurable for testing)
+    const maxDelay = Number.parseInt(process.env.VALIDATION_DELAY_MAX ?? '30000', 10);
     const minDelay = 1000; // Always at least 1 second
     const delay = Math.floor(Math.random() * (maxDelay - minDelay)) + minDelay;
 
