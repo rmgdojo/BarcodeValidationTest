@@ -1,0 +1,4 @@
+[test]
+# Preload happy-dom to provide DOM environment for React component tests
+# Also preload Bun-specific test setup
+preload = ["./happydom.ts", "./src/test/setup-bun.ts"]
