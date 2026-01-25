@@ -63,9 +63,9 @@ bun test
 The application follows a clean architecture pattern with clear separation of concerns:
 
 - **Frontend**: React 18 + TypeScript + Vite
-- **Backend**: Bun runtime with TypeScript
-- **State Management**: Redux Toolkit
-- **Styling**: Tailwind CSS
+- **Backend**: Bun runtime with TypeScript - can handle more requests per second than Node.js
+- **State Management**: Redux Toolkit - can be scaled a separated into a separate module in future
+- **Styling**: Tailwind CSS - easy for Design and Development alignment and potential future Tokenised Design System
 - **Validation**: Zod for runtime type validation
 - **Testing**: Vitest + React Testing Library
 
